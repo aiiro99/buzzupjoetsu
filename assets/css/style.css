@@ -1,0 +1,304 @@
+
+
+/* タブ切替 */
+.gallery-tabs {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.tab-btn {
+  background: #e3f2fd;
+  color: #0074e4;
+  border: none;
+  margin: 0 6px;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.tab-btn.active {
+  background: #0074e4;
+  color: #fff;
+}
+
+/* ギャラリー画像 */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+.gallery-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  max-width: 280px;
+}
+.gallery-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.gallery-img span {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.gallery-img.zoom:hover img {
+  transform: scale(1.05);
+}
+
+
+/* アクセスマップ */
+.access-map {
+  padding: 60px 20px;
+  text-align: center;
+
+  h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+    color: #2c4d66;
+  }
+
+  p {
+    font-size: 15px;
+    color: #4f6e8d;
+    margin-bottom: 20px;
+  }
+
+  .map-frame iframe {
+    width: 100%;
+    max-width: 720px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+}
+
+/* 駅からのアクセス */
+.access-fromstation {
+  padding: 40px 20px;
+  background: #f9fafd;
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #2c4d66;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+
+    li {
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: #555;
+    }
+  }
+}
+
+/* アクセスの流れ（図解） */
+.access-flow {
+  padding: 40px 20px;
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #2c4d66;
+  }
+
+  ol {
+    list-style: decimal;
+    padding-left: 24px;
+
+    li {
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: #444;
+    }
+  }
+}
+
+
+/* FAQ 検索 */
+.faq-search {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px 16px;
+  font-size: 14px;
+  margin: 16px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+}
+
+/* FAQ ジャンルタブ */
+.faq-tabs {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.faq-tab {
+  background: #f0f4f8;
+  color: #0074e4;
+  border: none;
+  margin: 0 6px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.faq-tab.active {
+  background: #0074e4;
+  color: #fff;
+}
+
+/* FAQ アコーディオン */
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.faq-item {
+  margin-bottom: 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  background: #f9fafd;
+  padding: 12px 16px;
+  font-size: 15px;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+}
+.faq-answer {
+  padding: 12px 16px;
+  font-size: 14px;
+  background: #fff;
+  display: none;
+}
+
+
+/* レスポンシブ調整 */
+@media screen and (max-width: 768px) {
+
+  /* 共通セクション調整 */
+  h1, h2, h3 {
+    font-size: 90%;
+  }
+
+  .event-overview p,
+  .access-fromstation ul,
+  .access-flow ol,
+  .faq-answer,
+  .faq-question {
+    font-size: 90%;
+  }
+
+  /* ギャラリー画像 */
+  .gallery-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery-img {
+    max-width: 90%;
+  }
+
+  /* 出店カテゴリボタン */
+  .category-buttons,
+  .faq-tabs {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .category-btn,
+  .faq-tab {
+    width: auto;
+    padding: 8px 12px;
+    font-size: 90%;
+  }
+
+  /* 出店カード配置 */
+  .stall-card {
+    margin: 12px auto;
+    width: 90%;
+  }
+
+  /* タイムライン（STAGE） */
+  .timeline li {
+    padding: 10px 14px;
+  }
+
+  /* モーダル */
+  .modal-content {
+    width: 92%;
+    padding: 20px;
+  }
+
+  /* アクセス地図 */
+  .map-frame iframe {
+    height: 220px;
+  }
+
+  /* FAQフォーム・検索 */
+  .faq-search {
+    width: 90%;
+  }
+}
+
+
+/* アニメーション仕上げ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+.fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeLeft 0.8s ease-out forwards;
+}
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 遅延アニメーション */
+.fade-up:nth-child(1) { animation-delay: 0.1s; }
+.fade-up:nth-child(2) { animation-delay: 0.2s; }
+.fade-up:nth-child(3) { animation-delay: 0.3s; }
+.fade-left:nth-child(1) { animation-delay: 0.1s; }
+.fade-left:nth-child(2) { animation-delay: 0.2s; }
+.fade-left:nth-child(3) { animation-delay: 0.3s; }
+.scale-in:nth-child(1) { animation-delay: 0.1s; }
+.scale-in:nth-child(2) { animation-delay: 0.2s; }
+.scale-in:nth-child(3) { animation-delay: 0.3s; }
