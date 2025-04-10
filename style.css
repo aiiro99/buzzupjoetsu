@@ -1,0 +1,94 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body, html {
+  font-family: 'Futura', 'Yu Gothic', sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+#opening {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.opening-logo {
+  font-size: 2.8rem;
+  color: white;
+  opacity: 0;
+  animation: logoFade 2s ease-in-out forwards;
+}
+
+@keyframes logoFade {
+  to { opacity: 1; }
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#particle-canvas,
+#wave-canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  top: 30%;
+}
+
+.main-title {
+  font-size: 4rem;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  opacity: 1;
+  display: inline-block;
+}
+
+.scroll-down {
+  margin-top: 3rem;
+  animation: bounce 2s infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scroll-down img {
+  width: 48px;
+  height: 48px;
+}
+
+.scroll-down span {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
