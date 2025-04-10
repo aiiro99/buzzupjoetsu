@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="description" content="上越最大級の高校生文化祭『Buzz Up！JOETSU』公式サイト。企画・出店・演奏・アクセス・ギャラリー情報まで完全網羅！" />
+  <meta property="og:title" content="Buzz Up！JOETSU | 学生が創る上越最大級の文化祭" />
+  <meta property="og:description" content="高校生が創る、青春と地域と音楽の最高イベント。" />
+  <meta property="og:image" content="https://example.com/ogp.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://buzzupjoetsu.example.com" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0074e4" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>アクセス | Buzz Up！JOETSU</title>
+  <link rel="stylesheet" href="assets/css/style.scss" />
+</head>
+<body>
+  <main>
+    <!-- コンテンツセクション：ACCESS -->
+    <section class="access-map fade-up">
+      <h2 class="fade-left">会場アクセス</h2>
+      <p class="fade-left">住所：新潟県上越市〇〇町1-2-3（旧〇〇高校）</p>
+      <div class="map-frame fade-up">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.981170000000!2d138.241!3d37.148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff5b!2z5qGc5p2x5biC!5e0!3m2!1sja!2sjp!4v0000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section class="access-fromstation fade-up">
+      <h3>上越駅からのアクセス</h3>
+      <ul>
+        <li><strong>徒歩：</strong> 約20分（Googleマップで「旧〇〇高校」で検索）</li>
+        <li><strong>タクシー：</strong> 約5分（料金目安：約800円）</li>
+        <li><strong>シャトルバス：</strong> 9:30 / 10:00 / 11:00（駅前ロータリーより発車）</li>
+      </ul>
+    </section>
+
+    <section class="access-flow fade-left">
+      <h3>アクセスの流れ（図解）</h3>
+      <ol>
+        <li>上越駅改札を出る</li>
+        <li>南口からロータリーへ</li>
+        <li>タクシーまたはバス乗り場を利用</li>
+        <li>約5分で会場に到着！</li>
+      </ol>
+    </section>
+  </main>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(function (registration) {
+            console.log('ServiceWorker registered: ', registration);
+          })
+          .catch(function (error) {
+            console.log('ServiceWorker registration failed: ', error);
+          });
+      });
+    }
+  </script>
+</body>
+</html>
