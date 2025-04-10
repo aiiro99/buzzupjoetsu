@@ -1,1 +1,0 @@
-// JS for interactivity and animation placeholders
