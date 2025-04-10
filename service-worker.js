@@ -1,1 +1,0 @@
-// Basic PWA service worker
