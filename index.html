@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buzz Up! JOETSU</title>
+  <link rel="stylesheet" href="/buzzupjoetsu/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.1/lottie.min.js"></script>
+
+  <link rel="manifest" href="/buzzupjoetsu/manifest.json">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/buzzupjoetsu/service-worker.js')
+        .then(() => console.log('Service Worker Registered'));
+    }
+  </script>
+
+
+  <!-- SEO META -->
+  <title>Buzz Up！JOETSU - 学生発、世界級の文化祭</title>
+  <meta name="description" content="Buzz Up！JOETSUは、学生主体で開催される未来型文化祭。上越の魅力と世界級の体験を届けます。">
+  <meta name="keywords" content="BuzzUp, JOETSU, 上越, 文化祭, 学生, イベント, 地域活性化, フェス, PWA">
+  <meta name="author" content="NAC × MIRAIZA Project">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Buzz Up！JOETSU - 学生発、世界級の文化祭">
+  <meta property="og:description" content="学生が創る、地域と世界をつなぐ次世代型イベント。">
+  <meta property="og:image" content="assets/images/ogp.jpg">
+  <meta property="og:url" content="https://buzzupjoetsu.jp">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Buzz Up！JOETSU">
+  <meta name="twitter:description" content="学生主体の文化祭。上越から世界へ。">
+  <meta name="twitter:image" content="assets/images/ogp.jpg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Buzz Up！JOETSU",
+    "startDate": "2025-11-15",
+    "endDate": "2025-11-17",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "上越市廃校スペース",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "上越市",
+        "addressRegion": "新潟県",
+        "postalCode": "943-0834",
+        "addressCountry": "JP"
+      }
+    },
+    "image": ["https://buzzupjoetsu.jp/assets/images/ogp.jpg"],
+    "description": "学生主体の地域文化祭。音楽・グルメ・テクノロジーが融合する次世代イベント。",
+    "organizer": {
+      "@type": "Organization",
+      "name": "NAC × MIRAIZA Project",
+      "url": "https://buzzupjoetsu.jp"
+    }
+  }
+  </script>
+
+</head>
+<body>
+  <div id="hero">
+    <div id="starfield" class="lottie-bg"></div>
+    <div id="pulse" class="lottie-overlay"></div>
+    <button id="scrollButton">太鼓アイコン</button>
+  </div>
+
+  <main>
+    <div id="navCard" class="nav-card">ナビカード</div>
+    <button id="postSuccess">SNS投稿成功</button>
+    <button id="faqSolved">FAQ解決</button>
+    <button id="modeSwitch">モード切替</button>
+    <div id="character" class="character" title="キャラをクリック">
+      <img src="/buzzupjoetsu/assets/images/flag-jump.png" id="jumpImg" />
+    </div>
+    <div id="footer">
+      <div id="bowCharacter" title="お辞儀キャラ">
+        <img src="/buzzupjoetsu/assets/images/bow-girl.png" id="bowImg" />
+      </div>
+    </div>
+  </main>
+
+  <script src="/buzzupjoetsu/js/script.js"></script>
+</body>
+</html>
