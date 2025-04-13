@@ -1,0 +1,22 @@
+
+{
+  "name": "Buzz Up! JOETSU",
+  "short_name": "BuzzUp",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b0c2a",
+  "theme_color": "#1a1c45",
+  "description": "学生発、世界級の文化祭Webアプリ",
+  "icons": [
+    {
+      "src": "assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
